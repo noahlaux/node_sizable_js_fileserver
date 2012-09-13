@@ -1,3 +1,11 @@
+/**
+ * Creates javascript files of various size
+ * 
+ * @example http://[YOUR URL]/?size=20000
+ * 
+ * @author Noah Laux (noahlaux@gmail.com)
+ *
+ */ 
 var http = require('http'),
     url = require("url"),
     util = require('util'),
@@ -6,8 +14,9 @@ var http = require('http'),
 
 mu.root = __dirname + '/templates';
 
-http.createServer(function (req, res) {
-    var query   = url.parse(req.url, true).query,
+http.createServer( function ( req, res ) {
+    
+    var query   = url.parse( req.url, true ).query,
         size    = query.size ? query.size : 200,
         string  = _.map( _.range( 0 , size ), function(){ 
             return "lorem ipsum ";
@@ -25,4 +34,4 @@ http.createServer(function (req, res) {
       
     util.pump(stream, res);
 
-}).listen(process.env.PORT);
+}).listen( process.env.PORT );
