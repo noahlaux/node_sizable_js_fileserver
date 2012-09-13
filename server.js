@@ -21,7 +21,9 @@ http.createServer( function ( req, res ) {
         string  = _.map( _.range( 0 , size ), function(){ 
             return "lorem ipsum ";
         }).join("");
-        
+    
+    mu.clearCache();
+    
     var stream = mu.compileAndRender('standard.mustache', {
         string: string
     });
@@ -29,8 +31,6 @@ http.createServer( function ( req, res ) {
     res.writeHead( 200, {
         'Content-Type': 'application/javascript'
     });
-   
-    mu.clearCache();
       
     util.pump(stream, res);
 
