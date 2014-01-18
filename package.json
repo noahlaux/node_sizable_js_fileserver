@@ -1,0 +1,26 @@
+{
+  "name": "sizable-js-fileserver",
+  "version": "0.0.2",
+  "author": "Noah Laux <noahlaux@gmail.com>",
+  "description": "A server serving a fake js file with a given length to test load times etc.",
+  "scripts": {
+    "start": "node ./bin/http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodejitsu/http-server.git"
+  },
+  "keywords": [
+    "js",
+    "file",
+    "server"
+  ],
+  "dependencies": {
+    "mu2": "~0.5.20",
+    "lodash": "~2.4.1"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
+}
