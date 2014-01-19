@@ -16,8 +16,7 @@
     "server"
   ],
   "dependencies": {
-    "mu2": "~0.5.20",
-    "lodash": "~2.4.1"
+    "mu2": "~0.5.20"
   },
   "license": "MIT",
   "engines": {
